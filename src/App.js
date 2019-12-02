@@ -1,7 +1,6 @@
 import React from "react";
 import TodoList from "./components/TodoComponents/TodoList";
 import TodoForm from "./components/TodoComponents/TodoForm";
-//import "./App.css";
 
 export default class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -44,9 +43,6 @@ export default class App extends React.Component {
     return (
       <div>
         <h2>Todo List</h2>
-        <TodoList 
-          todos={this.state.todos} 
-          markComplete={this.markComplete} />
         <TodoForm
           formValue={this.state.formValue}
           todos={this.state.todos}
@@ -54,6 +50,9 @@ export default class App extends React.Component {
           setFormValue={this.setFormValue}
           clearCompleted={this.clearCompleted}
         />
+        <TodoList 
+          todos={this.state.todos} 
+          markComplete={this.markComplete} />
       </div>
     );
   }
